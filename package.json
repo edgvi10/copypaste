@@ -1,0 +1,39 @@
+{
+  "name": "copypaste",
+  "description": "Copy and paste content from one place to another :D",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "edgvi10",
+      "homepage": "https://github.com/edgvi10",
+      "email": "edgvi10@gmail.com"
+    },
+    {
+      "name": "nox-0202",
+      "homepage": "https://github.com/nox-0202",
+      "email": "fenol64@gmail.com"
+    }
+  ],
+  "scripts": {
+    "dev": "next dev --port=3700",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.26.0",
+    "cors": "^2.8.5",
+    "linkdevs-db-walker": "^0.0.5",
+    "locutus": "^2.0.16",
+    "md5": "^2.3.0",
+    "next": "^12.1.0",
+    "nextjs-cors": "^2.1.0",
+    "nprogress": "^0.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sass": "^1.43.5",
+    "socket.io-client": "^4.4.1",
+    "uuid": "^8.3.2"
+  }
+}
