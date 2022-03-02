@@ -74,9 +74,9 @@ export default function Home({ slug, ...props }) {
         if (socket_connected) {
             clearTimeout(timeout_count);
             setTimeoutCount(setTimeout(() => {
-                console.log("sending paste", { content: base64(paste_update.content).encode() });
                 socket_server.emit("paste", slug, { content: base64(paste_update.content).encode() });
-            }, process.env.NEXT_PUBLIC_UPDATE_INTERVAL ?? 1000));
+                //     // console.log("sending paste", { content: base64(paste_update.content).encode() });
+            }, process.env.NEXT_PUBLIC_UPDATE_INTERVAL ?? 300));
         }
     };
 
