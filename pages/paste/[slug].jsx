@@ -21,10 +21,11 @@ export default function Home({ slug, ...props }) {
     const [abort_controller, setAbortToken] = useState(null);
 
     useEffect(() => {
-        // se houver configuração de socket, iniciar conexão
+        // se houver configuração de socket, iniciar conexão process.env.NEXT_PUBLIC_SOCKET_API_URL
         (async () => {
-            if (process.env.NEXT_PUBLIC_SOCKET_API_URL) {
-                const socket_server = io(`${process.env.NEXT_PUBLIC_SOCKET_API_URL}`, {
+            const url = "https://db.edapp.com.br:3701"
+            if (url) {
+                const socket_server = io(`${url}`, {
                     transports: ["websocket"],
                     reconnection: true,
                     reconnectionDelay: 5000,
