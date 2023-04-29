@@ -23,7 +23,7 @@ export default function Home({ slug, ...props }) {
     useEffect(() => {
         // se houver configuração de socket, iniciar conexão process.env.NEXT_PUBLIC_SOCKET_API_URL
         (async () => {
-            const url = "https://db.edapp.com.br:3701"
+            const url = "https://api.edapp.com.br/copypaste"
             if (url) {
                 const socket_server = io(`${url}`, {
                     transports: ["websocket"],
